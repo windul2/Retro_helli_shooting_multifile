@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"/>
+<title>RETRO HELI FPS DEFENSE - GitHub Multi File Edition</title>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div id="wrap">
+<canvas id="game"></canvas>
+<div class="topBtns" id="topBtns">
+  <button class="miniBtn" id="pauseBtn">일시정지</button>
+  <button class="miniBtn" id="musicBtn">음악 ON</button>
+  <button class="miniBtn" id="mainBtn">메인</button>
+</div>
+<div class="hudNote" id="hudNote">좌우 조준 · FIRE 발사 · 폭탄 요격</div>
+
+<section id="main" class="screen on">
+  <h1 class="title">RETRO HELI<br>FPS DEFENSE</h1>
+  <div class="sub">Retro 2D FPS 구조 + 헬리 디펜스 핵심 플레이<br>픽셀풍 1인칭 포탑 시점 / 웨이브 / 업그레이드 / 보스 / 모바일 지원</div>
+  <div class="panel">
+    <div class="panelTitle">미션 시간</div>
+    <div class="row" id="timeRow">
+      <button class="opt" data-time="45">45초</button><button class="opt on" data-time="75">75초</button><button class="opt" data-time="120">120초</button>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="panelTitle">난이도</div>
+    <div class="row" id="diffRow">
+      <button class="opt" data-diff="0">훈련</button><button class="opt on" data-diff="1">보통</button><button class="opt" data-diff="2">하드</button>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="panelTitle">무기 선택</div>
+    <div class="row" id="weaponRow">
+      <button class="opt on" data-weapon="cannon">대공포</button><button class="opt" data-weapon="rapid">연사포</button><button class="opt" data-weapon="rail">관통포</button>
+    </div>
+  </div>
+  <button class="btn green" id="startBtn">게임 시작</button>
+  <button class="btn" id="mainMusicBtn">음악 ON / OFF</button>
+  <button class="btn hot" id="exitBtn">종료 안내</button>
+  <div class="small">게임 중 일시정지, 메인으로 나가기, 음악 ON/OFF 가능<br>Retro 2D FPS처럼 HUD·미니맵·조준 대상 배너·라운드 진행 구조를 넣고, 플레이는 헬기 방어로 강화했습니다.</div>
+</section>
+
+<section id="pause" class="screen">
+  <h1 class="title">PAUSED</h1>
+  <div class="sub">전장이 잠시 멈췄습니다.</div>
+  <button class="btn green" id="resumeBtn">계속하기</button>
+  <button class="btn" id="restartBtn">처음부터 다시</button>
+  <button class="btn hot" id="pauseMainBtn">메인으로</button>
+</section>
+
+<section id="over" class="screen">
+  <h1 class="title" id="overTitle">MISSION END</h1>
+  <div class="sub" id="overText"></div>
+  <button class="btn green" id="overRestart">다시 시작</button>
+  <button class="btn hot" id="overMain">메인으로</button>
+</section>
+
+<section id="exit" class="screen">
+  <h1 class="title">종료 안내</h1>
+  <div class="sub">HTML 게임은 보안상 브라우저를 직접 종료할 수 없습니다.<br>뒤로가기, 탭 닫기, 홈 버튼을 사용하세요.</div>
+  <button class="btn green" id="backMainBtn">메인으로 돌아가기</button>
+</section>
+</div>
+<script src="config.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
